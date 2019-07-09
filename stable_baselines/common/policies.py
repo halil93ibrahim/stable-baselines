@@ -56,7 +56,7 @@ def mlp_extractor(flat_observations, net_arch, act_fun):
     latent = flat_observations
     policy_only_layers = []  # Layer sizes of the network that only belongs to the policy network
     value_only_layers = []  # Layer sizes of the network that only belongs to the value network
-    halil = 0  # an unnecessary change
+    halil = 2  # an unnecessary change
 
     # Iterate through the shared layers and build the shared parts of the network
     for idx, layer in enumerate(net_arch):
