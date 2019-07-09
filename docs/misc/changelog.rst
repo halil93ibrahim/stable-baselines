@@ -6,6 +6,36 @@ Changelog
 For download links, please look at `Github release page <https://github.com/hill-a/stable-baselines/releases>`_.
 
 
+Pre-Release 2.6.1a0 (WIP)
+--------------------------
+
+Breaking Changes:
+^^^^^^^^^^^^^^^^^
+
+New Features:
+^^^^^^^^^^^^^
+
+Bug Fixes:
+^^^^^^^^^^
+- fixed a bug in ``traj_segment_generator`` where the ``episode_starts`` was wrongly recorded,
+  resulting in wrong calculation of Generalized Advantage Estimation (GAE), this affects TRPO, PPO1 and GAIL (thanks to @miguelrass for spotting the bug)
+
+Deprecations:
+^^^^^^^^^^^^^
+
+Others:
+^^^^^^^
+- renamed some keys in ``traj_segment_generator`` to be more meaningful
+- retrieve unnormalized reward when using Monitor wrapper with TRPO, PPO1 and GAIL
+  to display them in the logs (mean episode reward)
+
+Documentation:
+^^^^^^^^^^^^^^
+
+- doc fix for the hyperparameter tuning command in the rl zoo
+
+
+
 Release 2.6.0 (2019-06-12)
 --------------------------
 
@@ -374,4 +404,4 @@ In random order...
 Thanks to @bjmuld @iambenzo @iandanforth @r7vme @brendenpetersen @huvar @abhiskk @JohannesAck
 @EliasHasle @mrakgr @Bleyddyn @antoine-galataud @junhyeokahn @AdamGleave @keshaviyengar @tperol
 @XMaster96 @kantneel @Pastafarianist @GerardMaggiolino @PatrickWalter214 @yutingsz @sc420 @Aaahh @billtubbs
-@Miffyli @dwiel
+@Miffyli @dwiel @miguelrass
